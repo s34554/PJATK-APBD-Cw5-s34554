@@ -15,11 +15,11 @@ public static class DataBase
 
     public static List<Reservation> Reservations { get; } = new()
     {
-        new Reservation { Id = 1, RoomId = 1, OrganizerName = "Jan Kowalski", Date = new DateOnly(2026, 4, 14), StartTime = new TimeOnly(9, 0), EndTime = new TimeOnly(10, 30), Status = ReservationStatus.Confirmed },
-        new Reservation { Id = 2, RoomId = 2, OrganizerName = "Anna Nowak", Date = new DateOnly(2026, 4, 14), StartTime = new TimeOnly(11, 0), EndTime = new TimeOnly(12, 0), Status = ReservationStatus.Planned },
-        new Reservation { Id = 3, RoomId = 1, OrganizerName = "Piotr Zieliński", Date = new DateOnly(2026, 4, 15), StartTime = new TimeOnly(14, 0), EndTime = new TimeOnly(15, 30), Status = ReservationStatus.Cancelled },
-        new Reservation { Id = 4, RoomId = 5, OrganizerName = "Maria Wiśniewska", Date = new DateOnly(2026, 4, 16), StartTime = new TimeOnly(8, 0), EndTime = new TimeOnly(9, 0), Status = ReservationStatus.Confirmed },
-        new Reservation { Id = 5, RoomId = 3, OrganizerName = "Jan Kowalski", Date = new DateOnly(2026, 4, 16), StartTime = new TimeOnly(13, 0), EndTime = new TimeOnly(14, 0), Status = ReservationStatus.Planned }
+        new Reservation { Id = 1, RoomId = 1, OrganizerName = "Jan Kowalski", Topic = "Wprowadzenie do C#" ,Date = new DateOnly(2026, 4, 14), StartTime = new TimeOnly(9, 0), EndTime = new TimeOnly(10, 30), Status = ReservationStatus.Confirmed },
+        new Reservation { Id = 2, RoomId = 2, OrganizerName = "Anna Nowak", Topic = "Przegląd kwartalny projektu", Date = new DateOnly(2026, 4, 14), StartTime = new TimeOnly(11, 0), EndTime = new TimeOnly(12, 0), Status = ReservationStatus.Planned },
+        new Reservation { Id = 3, RoomId = 1, OrganizerName = "Piotr Zieliński", Topic = "Warsztaty z REST API", Date = new DateOnly(2026, 4, 15), StartTime = new TimeOnly(14, 0), EndTime = new TimeOnly(15, 30), Status = ReservationStatus.Cancelled },
+        new Reservation { Id = 4, RoomId = 5, OrganizerName = "Maria Wiśniewska", Topic = "Szkolenie BHP dla nowych pracowników", Date = new DateOnly(2026, 4, 16), StartTime = new TimeOnly(8, 0), EndTime = new TimeOnly(9, 0), Status = ReservationStatus.Confirmed },
+        new Reservation { Id = 5, RoomId = 3, OrganizerName = "Jan Kowalski", Topic = "Planowanie sprintu Q2", Date = new DateOnly(2026, 4, 16), StartTime = new TimeOnly(13, 0), EndTime = new TimeOnly(14, 0), Status = ReservationStatus.Planned }
     };
 
     public static int NextRoomId => Rooms.Max(r => r.Id) + 1;

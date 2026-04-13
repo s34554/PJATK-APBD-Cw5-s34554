@@ -79,6 +79,7 @@ public class ReservationsController : ControllerBase
     private static bool HasConflict(Reservation reservation, int? excludeId = null)
     {
         return DataBase.Reservations.Any(r =>
+            r.Status != ReservationStatus.Cancelled &&
             r.RoomId == reservation.RoomId &&
             r.Date == reservation.Date &&
             r.Id != excludeId &&

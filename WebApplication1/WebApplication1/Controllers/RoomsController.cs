@@ -31,4 +31,26 @@ public class RoomsController : ControllerBase
             if (!rooms.Any()) return NotFound("No rooms in with this building code");
             return Ok(rooms);
       }
+
+      [HttpPost]
+      public IActionResult AddRoom([FromBody] Room room)
+      {
+            DataBase.Rooms.Add(room);
+            return CreatedAtAction(nameof(GetById),new {id = room.Id}, room);
+      }
+      
+      [HttpPut("{id:int}")]
+      public IActionResult AlterRoom(int id)
+      {
+            throw new NotImplementedException();
+      }
+      
+      [HttpDelete("{id:int}")]
+      public IActionResult DeleteRoom(int id)
+      {
+            var room = DataBase.Rooms.FirstOrDefault(r => r.Id == id);
+            if (room == null) return NotFound("No room with this Id");
+            DataBase.Rooms.Remove(room);
+            return NoContent();
+      }
 }

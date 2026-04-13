@@ -1,6 +1,13 @@
-﻿namespace WebApplication1.Enums;
+﻿using System.Runtime.Serialization;
+
+namespace WebApplication1.Enums;
 
 public enum ReservationStatus
 {
-    Planned, Confirmed, Cancelled
+    [EnumMember(Value = "planned")]
+    Planned,
+    [EnumMember(Value = "confirmed")]
+    Confirmed,
+    [EnumMember(Value = "cancelled")]
+    Cancelled
 }

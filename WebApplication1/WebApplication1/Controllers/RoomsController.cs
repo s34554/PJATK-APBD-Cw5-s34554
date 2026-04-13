@@ -28,7 +28,7 @@ public class RoomsController : ControllerBase
       public IActionResult GetByBuildingCode(int buildingCode)
       {
             var rooms = DataBase.Rooms.Where(r => r.BuildingCode == buildingCode);
-            if (!rooms.Any()) return NotFound("No rooms in with this building code");
+            if (!rooms.Any()) return NotFound("No rooms with this building code");
             return Ok(rooms);
       }
 

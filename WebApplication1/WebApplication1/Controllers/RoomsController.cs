@@ -24,7 +24,7 @@ public class RoomsController : ControllerBase
             return Ok(room);
       }
 
-      [HttpGet("building/{buildingCode:int}")]
+      [HttpGet("building/{buildingCode}")]
       public IActionResult GetByBuildingCode(string buildingCode)
       {
             var rooms = DataBase.Rooms.Where(r => r.BuildingCode == buildingCode);

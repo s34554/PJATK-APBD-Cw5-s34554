@@ -35,6 +35,7 @@ public class RoomsController : ControllerBase
       [HttpPost]
       public IActionResult AddRoom([FromBody] Room room)
       {
+            room.Id = DataBase.NextRoomId;
             DataBase.Rooms.Add(room);
             return CreatedAtAction(nameof(GetById),new {id = room.Id}, room);
       }

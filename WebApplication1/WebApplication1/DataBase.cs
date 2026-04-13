@@ -6,11 +6,11 @@ public static class DataBase
 {
     public static List<Room> Rooms { get; } = new()
     {
-        new Room { Id = 1, Name = "Alfa", BuildingCode = 101, Floor = 1, Capacity = 10, HasProjector = true, IsActive = true },
-        new Room { Id = 2, Name = "Beta", BuildingCode = 101, Floor = 2, Capacity = 20, HasProjector = true, IsActive = true },
-        new Room { Id = 3, Name = "Gamma", BuildingCode = 102, Floor = 0, Capacity = 6, HasProjector = false, IsActive = true },
-        new Room { Id = 4, Name = "Delta", BuildingCode = 102, Floor = 1, Capacity = 15, HasProjector = true, IsActive = false },
-        new Room { Id = 5, Name = "Omega", BuildingCode = 103, Floor = 3, Capacity = 50, HasProjector = true, IsActive = true }
+        new Room { Id = 1, Name = "Alfa", BuildingCode = "101", Floor = 1, Capacity = 10, HasProjector = true, IsActive = true },
+        new Room { Id = 2, Name = "Beta", BuildingCode = "101", Floor = 2, Capacity = 20, HasProjector = true, IsActive = true },
+        new Room { Id = 3, Name = "Gamma", BuildingCode = "102", Floor = 0, Capacity = 6, HasProjector = false, IsActive = true },
+        new Room { Id = 4, Name = "Delta", BuildingCode = "102", Floor = 1, Capacity = 15, HasProjector = true, IsActive = false },
+        new Room { Id = 5, Name = "Omega", BuildingCode = "103", Floor = 3, Capacity = 50, HasProjector = true, IsActive = true }
     };
 
     public static List<Reservation> Reservations { get; } = new()

@@ -8,7 +8,7 @@ namespace WebApplication1.Controllers;
 public class RoomsController : ControllerBase
 {
       [HttpGet]
-      public IActionResult GetRooms([FromQuery] int? minCapacity, [FromQuery] bool? hasProjector, bool? activeOnly)
+      public IActionResult GetRooms([FromQuery] int? minCapacity, [FromQuery] bool? hasProjector, [FromQuery] bool? activeOnly)
       {
             var rooms = DataBase.Rooms.AsEnumerable();
             if(minCapacity != null) rooms = rooms.Where(r => r.Capacity >= minCapacity);
